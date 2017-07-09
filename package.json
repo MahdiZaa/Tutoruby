@@ -1,0 +1,21 @@
+{
+  "name": "Tuto",
+  "version": "4.0.3",
+  "description": ">  Ruby tuto est une application qui vous en apprend sur le ruby.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahdizxxx/Tutoruby"
+  },
+  "author": "Mahdi Z.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "Ruby",
+    "lessons",
+    "mahdi",
+    "stinson"
+  ],
+  "bugs": {
+    "url": "https://github.com/mahdizxxx/Tutoruby/issues"
+  },
+  "homepage": "https://github.com/mahdizxxx/Tutoruby"
+}

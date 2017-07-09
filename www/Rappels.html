@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			img { width:100%;}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/index.css"></link>
+		<meta charset="utf-8">
+	</head>
+
+
+<title>Rappels</title>
+<body>
+
+	<div id="nav">
+		<p>
+		 <a href="index.html"><img src="img/logo.png"></a>
+		</p>
+
+
+			<a href="Historique.html#content">Historique</a>  
+			<a href="Rappels.html#content">Rappels</a>  
+			<a href="Questions.html#content">Questions</a>  
+			<a href="Corrige.html#content">Corrigé</a> 
+			<a href="Contact.html#content">Contact</a>
+
+	</div>
+
+
+	<div id="content">
+		<br>
+		<h1> Rappels </h1><br><br>
+		<div class="chapitrecours">
+			<h2> Variables et objets simples </h2>
+			<p>
+				<ul>
+				    <li>Pour exécuter du code Ruby directement dans votre console,  il vous faut utiliser la console Ruby appelée IRB (Interactive Ruby)  en tapant la commande suivante :
+				    </li> 
+				</ul>
+			</p>	    	
+    				<p class="console"> <span class="num">1.</span>   irb </p> 
+    		<p>			
+    				Ensuite, tapez la commande Ruby que vous souhaitez. 
+    			<ul>	
+    				<li> Une variable est une sorte de "boîte" dans laquelle on range un contenu qui peut être de différentes formes :  un nombre, une chaîne de caractère (ou string)... et bien d'autres formes encore que vous allez découvrir plus tard dans ce cours ! 
+    				</li>
+    				<li>	
+				    On utilise l'opérateur =  pour ranger un objet dans une variable, par exemple :
+				    cadeau = "bon pour un voyage autour du monde".
+				    On dit qu'on assigne une valeur ("bon pour un voyage autour du monde") à une variable (cadeau).
+				    </li>
+				    <li>	
+				    On peut effectuer des opérations mathématiques sur des variables contenant des nombres. Par exemple, la variable age_de_ruby suivante :
+				    age_de_ruby = 2015 - annee_de_naissance_ruby  
+				    contiendra la valeur 20  (et oui, Ruby a tout l'avenir devant lui :D).
+				    </li>
+				    <li>
+				    On peut regrouper des variables contenant des chaînes de caractères à l'aide de l'opérateur +  :  on dit qu'on fait de la concaténation. Par exemple, la variable message  suivante :
+				    message = "Bravo, tu as reçu un " + cadeau + " !" 
+				    contiendra la valeur "Bravo, tu as reçu un bon pour un voyage autour du monde !" 
+					</li>
+				</ul>    
+			</p>
+			
+		</div>
+		<div class="chapitrecours">
+			<h2> Les tableaux </h2>
+			<p>
+				<ul>
+				    <li>
+				    Les tableaux permettent de ranger des données de façon ordonnée que l'on retrouve à l'aide d'un index. 
+				    Pour créer un tableau, on utilise les crochets, par exemple :
+				    </li> 
+				</ul>
+			</p>	    	
+    				<p class="console"> <span class="num">1.</span>   mes_escales_tour_du_monde = [ "Paris", "Toronto", "NYC", "Rio", "Sydney", "Hong-Kong", "Berlin" ] </p> 
+    		<p>			
+    				Ça vous tente... ? 
+    			<ul>	
+    				<li> On peut appliquer des méthodes à une variable contenant un tableau de la façon suivante :  
+    				</li>
+    			</ul>
+    			</p>	    	
+    				<p class="console"> <span class="num">1.</span>   nom_du_tableau.nom_de_la_methode </p> 
+    			<p>
+    			<ul>
+    				<li>	
+				    La méthode size permet de connaître le nombre d'éléments d'un tableau. Par exemple, pour vérifier combien d'escales je vais faire dans mon tour du monde, je peux taper : 
+				    </li>
+				</ul>
+				</p>
+					<p class="console"> <span class="num">1.</span> mes_escales_tour_du_monde.size </p> 
+    		<p>			    
+					qui renverra la valeur 7. 
+				<ul>    
+				    <li>	
+				    La méthode reverse permet d'inverser l'ordre des éléments d'un tableau. Ainsi, si je décide de refaire mon tour du monde dans le sens inverse, je peux faire : 
+				    </li>
+				</ul>
+				</p>
+					<p class="console"> <span class="num">1.</span> mes_escales_tour_du_monde.reverse </p> 
+    		<p>			    
+					qui renverra un tableau contenant Berlin en première escale : ["Berlin","Hong-Kong", ....].
+				<ul>				    
+				    <li>
+				    Pour accéder à un élément dans un tableau,  on précise la position (ou index) de l'élément entre crochets. Par exemple, 
+					</li>
+				</ul>    
+			</p>
+					<p class="console"> <span class="num">1.</span> mes_escales_tour_du_monde[2] </p> 
+    		<p>			    
+					renverra la ville de "NYC". 
+				<ul>    
+				    <li>	
+				    Pour ajouter un élément dans un tableau, on utilise deux chevrons <<. Si je veux prolonger mon tour du monde à Londres, je taperai donc :  
+				    </li>
+				</ul>
+				</p>
+					<p class="console"> <span class="num">1.</span>   mes_escales_tour_du_monde << "Londres" </p> 
+    			<p>
+    			<ul>
+    				<li>	
+				    Pour modifier l'élément d'un tableau, on lui affecte la valeur souhaitée avec le signe =. Je peux donc remplacer Berlin par Barcelone si je parle mieux l'espagnol que l'allemand :
+				    </li>
+				</ul>
+				</p>
+					<p class="console"> <span class="num">1.</span>   mes_escales_tour_du_monde[6] = "Barcelone"</p>
+				<h2> Les tables de hashage </h2>
+			<p>
+				<ul>
+				    <li>
+				    Les tables de hashage (ou hashes) permettent de ranger des données que l'on retrouve à l'aide d'une clé.
+				    </li> 
+				    <li>
+				    Pour créer une table de hashage, on utilise des accolades {}. Chaque valeur rangée dans cette table est associée à une clé qui permettra de la retrouver :
+				    </li>
+				</ul>
+				
+			</p>	    	
+    				<p class="console"> <span class="num">1.</span>  table_de_hashage = { clé_1: valeur_1, clé_2: valeur_2, ... }</p> 
+    		<p>			
+    				Par exemple, pour enregistrer le nombre de jours à passer dans chaque escale, je peux créer une table de hashage jours_voyage  :
+    		</p>
+    				<p class="console"> <span class="num">1.</span> jours_voyage = { paris: 0, toronto: 7, nyc: 3 }</p> 
+    		<p>
+    				 
+    			<ul>	
+    				<li> Pour accéder à la valeur d'un élément dans un hash, on précise sa clé entre crochets. Si je ne me souviens plus combien de temps j'ai prévu pour mon escale à Toronto, il me suffit d'appeler :
+    				</li>
+    			</ul>
+    			</p>	    	
+    				<p class="console"> <span class="num">1.</span>  jours_voyage[:toronto] </p>	
+    		<p>
+    			qui me renverra 7 jours. 	 
+    			<ul>	
+    				<li> Pour ajouter ou modifier un élément dans un hash, on utilise l'opérateur =. Par exemple en ajoutant :  
+    				</li>
+    			</ul>
+    			</p>
+    				<p class="console"> <span class="num">1.</span>  jours_voyage[:rio] = 5</p>	
+    		<p>
+    			mon hash jours_voyage contiendra la durée de mon séjour à Rio en plus : 
+    		</p>
+    				<p class="console"> <span class="num">1.</span>  { paris: 0, toronto: 7, nyc: 3, rio: 5 } </p>				
+    		<h2> Les Boucles </h2>
+			<p>
+				<ul>
+				    <li>
+				    Pour exécuter un fichier Ruby à partir de la console, placez votre console dans le répertoire contenant le fichier et tapez : 
+				    </li>
+				</ul>
+				
+			</p>	    	
+    				<p class="console"> <span class="num">1.</span>  ruby nom_du_fichier.rb</p> 
+    		<p>			
+    			<ul>	
+    				<li> Une boucle permet d'effectuer des actions répétitives de manière simple à l'aide du mot-clé each , par exemple pour parcourir un tableau ou encore refaire plusieurs fois la même action. 
+    				</li>
+    				<li> Exemple de boucle pour parcourir un tableau :   
+    				</li>
+    			</ul>
+    		</p>
+    				<p class="console"> <span class="num">1.</span> jours_ouvres = [ 					<br>
+    									<span class="num">2. </span> "lundi","mardi","mercredi","jeudi" <br>
+    									<span class="num">3. </span> "vendredi" ]						<br>
+    									<span class="num">4. </span> 									<br>
+    									<span class="num">5. </span> i=5								<br>
+    									<span class="num">6.</span> 									<br>
+    									<span class="num">7. </span> jours_ouvres.each do |jour|	    <br>
+    									<span class="num">8. </span>   if jour == "vendredi"			<br>
+    									<span class="num">9. </span> 	puts jour + " : Bon weekend !"	<br>
+    									<span class="num">10. </span>   elsif jour == "lundi"			<br>
+    									<span class="num">11. </span> puts jour + " : Bon courage !"	<br>
+    									<span class="num">12. </span> else								<br>
+    									<span class="num">13.</span> puts jour + " : Weekend dans #{i} jours! 	<br>
+    									<span class="num">14. </span>   end								<br>
+    									<span class="num">15. </span> 	i-=1							<br>
+    									<span class="num">16. </span>  end								<br>
+
+
+    				</p>
+    		<p>
+    			Résultat dans la console : 
+    		</p>							
+    				<p class="console"> <span class="num">1.</span> lundi : Bon courage ! 				<br>
+    									<span class="num">2. </span> mardi : Weekend dans 4 jours !     <br>
+    									<span class="num">3. </span> mercredi : Wekeend dans 3 jours !	<br>
+    									<span class="num">4. </span> jeudi : Weekend dans 2 jours !		<br>
+    									<span class="num">5. </span> vendredi : Bon weekend !			<br>
+    				</p>
+    		<p>			
+    			<ul>	
+    				<li> 
+   						 Exemple de boucle de répétition :  
+    				</li>
+    			</ul>
+    		</p>
+    				<p class="console"> <span class="num">1.</span> 7.times do 			 				<br>
+    									<span class="num">2. </span>  puts "tourner sa langue"	        <br>
+    									<span class="num">3. </span> end 								<br>
+    									<span class="num">4. </span> puts " ...et parler ! "			<br>
+    				</p>
+    		<p>
+    			Résultat dans la console : 
+    		</p>
+    				<p class="console"> <span class="num">1.</span> tourner sa langue 			 		<br>
+    									<span class="num">2. </span> tourner sa langue	         		<br>
+    									<span class="num">3. </span> tourner sa langue					<br>
+    									<span class="num">4. </span> tourner sa langue					<br>
+    									<span class="num">5.</span> tourner sa langue 			 		<br>
+    									<span class="num">6. </span> tourner sa langue	         		<br>
+    									<span class="num">7. </span> tourner sa langue					<br>
+    									<span class="num">8. </span> tourner sa langue					<br>
+    				</p>
+    						
+    		<h2> Les conditions </h2>
+			<p>
+				<ul>
+				    <li>
+				    On peut ajouter des conditions pour réaliser différentes actions dans Ruby selon le cas à l'aide des mots-clés if, else, elsif : 
+				    </li> 
+				
+				</ul>
+				
+			</p>	    	
+    				<p class="console"> <span class="num">1.</span> if trajet_minutes > 120		 		<br>
+    									<span class="num">2. </span> puts "Prends un film avec toi"	 	<br>
+    									<span class="num">3. </span> elsif trajet_minutes < 5 			<br>
+    									<span class="num">4. </span> puts "Pas le temps de t'asseoir..."<br>
+    									<span class="num">5.</span>  else 						 		<br>
+    									<span class="num">6. </span> puts "Tu as le temps de lire au moins <br>
+    									<span class="num">7. </span> quelques chapitres d'un bouquin !"	<br>
+    									<span class="num">8. </span> end 								<br>
+    				</p>
+    		<p>			    
+				<ul>				    
+				    <li>
+				    On peut combiner des conditions à l'aide des signes &&  (pour "ET") et || (pour "OU").  
+					</li>
+					    <li>
+				    Les booléens sont des variables utiles pour tester si une condition est vraie ou fausse. Dans l'exemple ci-dessous, code_indenté est un booléen qui vaut "true" ou "false". 
+					</li>
+				</ul>    
+			</p>
+					<p class="console"> <span class="num">1.</span> if code_indenté				 		<br>
+    									<span class="num">2. </span> puts "Bravo, ton code est bien indenté !"<br>
+    									<span class="num">3. </span> else 					 			<br>
+    									<span class="num">4. </span> puts "Pense à bien indenter ton code pour <br>
+    									<span class="num">5.</span>  améliorer sa lisibilité !"	 		<br>
+    									<span class="num">6. </span> end 								<br>
+    				</p>
+    		<p>			    
+				<ul>				    
+				    <li>
+				    Pour vérifier une condition d'égalité, il faut utiliser deux signes égal (==). Faites attention à ne pas confondre avec le signe égal tout seul (=) qui sert à affecter une valeur à une variable :  
+					</li>
+					
+				</ul>    
+			</p>
+					<p class="console"> <span class="num">1.</span> age=18 # variable				 	<br>
+    									<span class="num">2. </span> age==18 # booleen 					<br>
+
+    				</p>
+    		<p>
+    			Voilà, vous avez fait le tour des bases de Ruby, j'espère que ça vous a plu !
+    		</p>				
+			
+		</div>
+	</div>
+	<footer>
+		<p>
+		 <a href="index.html"><img src="img/logo.png"></a>
+		</p>
+	</footer>
+</body>
+</html>
