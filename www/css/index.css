@@ -35,6 +35,11 @@
 	font-family: serif;
 	padding:0px;
 }
+#section img {
+	float: left;
+	margin: 5px;
+	
+}
 
 #content {
 	text-align: center;
@@ -45,6 +50,7 @@
 #content p {
 	font-family: 'sansitaregular';
 	text-align: left;
+	float: clear;
 }
 #content ul, li {
 	font-family: 'sansitaregular';
